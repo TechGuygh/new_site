@@ -197,6 +197,12 @@ html[data-theme="dark"] .brand-mark .b0 { fill: #111827; }
 .btn--sm { padding: .55rem .8rem; font-size: .9rem; }
 .btn:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
 
+/* Highlight selected price card */
+.plan.card.is-selected {
+  outline: 2px solid var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
 /* Features */
 .features {
   display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem;
@@ -233,7 +239,7 @@ html[data-theme="dark"] .brand-mark .b0 { fill: #111827; }
   position: absolute; top: 10px; right: -18px; rotate: 15deg;
   background: var(--accent); color: #0b1220; font-weight: 800; padding: .2rem .6rem; border-radius: .4rem;
 }
-.is-popular { outline: 2px solid color-mix(in oklab, var(--primary) 55%, var(--border)); }
+/* .is-popular { outline: 2px solid color-mix(in oklab, var(--primary) 55%, var(--border)); } */
 
 /* Testimonials */
 .testimonials { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }

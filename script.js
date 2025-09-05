@@ -146,5 +146,17 @@ if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
   });
 })();
 
+/* Price card selection */
+(function priceCardSelect() {
+  const cards = $$('.plan.card');
+  if (!cards.length) return;
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      cards.forEach(c => c.classList.remove('is-selected'));
+      card.classList.add('is-selected');
+    });
+  });
+})();
+
 /* Footer year */
 $('#year').textContent = new Date().getFullYear();

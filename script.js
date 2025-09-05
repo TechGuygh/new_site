@@ -124,28 +124,27 @@ const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 })();
 
 /* Newsletter mini-validate */
-// (function newsletter() {
-//   const f = $('#newsForm');
-//   const input = $('#newsEmail');
-//   const err = $('#newsErr');
-//   const ok = $('#newsOk');
-//   if (!f) return;
+(function newsletter() {
+  const f = $('#newsForm');
+  const input = $('#newsEmail');
+  const err = $('#newsErr');
+  const ok = $('#newsOk');
+  if (!f) return;
 
-//   f.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const v = input.value.trim();
-//     if (!/^[^\s@]+@[^\s@]+\.
-// [^\s@]+$/.test(v)) {
-//       err.textContent = 'Enter a valid email.';
-//       ok.hidden = true;
-//     } else {
-//       err.textContent = '';
-//       ok.hidden = false;
-//       f.reset();
-//       setTimeout(() => (ok.hidden = true), 3000);
-//     }
-//   });
-// }
+  f.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = input.value.trim();
+if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
+      err.textContent = 'Enter a valid email.';
+      ok.hidden = true;
+    } else {
+      err.textContent = '';
+      ok.hidden = false;
+      f.reset();
+      setTimeout(() => (ok.hidden = true), 3000);
+    }
+  });
+})();
 
 /* Footer year */
 $('#year').textContent = new Date().getFullYear();

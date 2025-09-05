@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" class="no-js" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Nova — Modern Starter Website</title>
+  <meta name="description" content="Nova is a sleek, responsive starter website with dark mode, accessible navigation, and delightful animations." />
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nova — Modern Starter Website" />
+  <meta property="og:description" content="Sleek, responsive, accessible, and fast.">
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?w=1200&q=80&auto=format&fit=crop" />
+  <meta property="og:url" content="https://example.com" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230f172a"/><path d="M16 40L28 20l8 12 4-6 8 14" stroke="%23a3e635" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'>
+
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Prevent theme flash
+    (function () {
+      const stored = localStorage.getItem('theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+      document.documentElement.classList.remove('no-js');
+    })();
+  </script>
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Nav -->
+  <header class="site-header" data-elevate>
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Nova Home">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 64 64" class="brand-mark">
+          <rect width="64" height="64" rx="14" class="b0"/>
+          <path d="M16 40L28 20l8 12 4-6 8 14" class="b1"/>
+        </svg>
+        <span class="brand-text">Nova</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Toggle menu</span>
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul class="nav__list" id="navMenu">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li class="nav__cta"><a href="#contact" class="btn btn--sm btn--primary">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+              <span class="sun" aria-hidden="true">☀️</span>
+              <span class="moon" aria-hidden="true">🌙</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="section hero">
+      <div class="container grid-2">
+        <div class="hero__copy">
+          <p class="eyebrow">Introducing Nova</p>
+          <h1 class="display">Build stunning sites <span class="accent">faster</span>.</h1>
+          <p class="lead">A clean, accessible starter with modern UI, dark mode, fluid type, and buttery-smooth animations — perfect for startups, portfolios, and product pages.</p>
+          <div class="actions">
+            <a href="#pricing" class="btn btn--primary">Get Started</a>
+            <a href="#portfolio" class="btn btn--ghost">See Our Work</a>
+          </div>
+          <ul class="trust">
+            <li>⚡️ Fast</li>
+            <li>🛡️ Accessible</li>
+            <li>🧩 Modular</li>
+          </ul>
+        </div>
+<div class="hero__art" aria-hidden="true">
+          <div class="glass-card">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4cfdc52d4df?w=1400&q=80&auto=format&fit=crop" alt="" loading="eager" decoding="async">
+            <div class="badge">New • v1.0</div>
+          </div>
+          <div class="orbit">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Everything you need, nothing you don’t</h2>
+          <p class="muted">Thoughtful defaults, extensible patterns, and clean code you’ll enjoy shipping.</p>
+        </header>
+
+        <div class="features">
+          <article class="card feature" data-reveal>
+            <div class="icon i-gradient" aria-hidden="true">🎯</div>
+            <h3>Accessible by default</h3>
+            <p>Semantic HTML, proper contrast, focus rings, skip links, and keyboard-friendly controls.</p>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="icon i-gradient" aria-hidden="true">🧪</div>
+            <h3>Robust components</h3>
+            <p>Buttons, cards, tabs, accordions, and responsive grids with zero dependencies.</p>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="icon i-gradient" aria-hidden="true">⚙️</div>
+            <h3>Theme ready</h3>
+            <p>One-click dark mode with CSS variables and system preference detection.</p>
+          </article>
+          <article class="card feature" data-reveal>
+            <div class="icon i-gradient" aria-hidden="true">🚀</div>
+            <h3>Performance minded</h3>
+            <p>Fluid typography, content-visibility, lazy images, and optimized paint.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio / Work -->
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Selected work</h2>
+          <p class="muted">A quick peek at recent projects.</p>
+        </header>
+
+        <div class="filters" role="tablist" aria-label="Filter projects">
+          <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="chip" role="tab" aria-selected="false" data-filter="web">Web</button>
+          <button class="chip" role="tab" aria-selected="false" data-filter="app">App</button>
+          <button class="chip" role="tab" aria-selected="false" data-filter="brand">Brand</button>
+        </div>
+
+        <div class="grid-3 gallery" id="gallery">
+          <figure class="card project" data-category="web" data-reveal>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop" alt="Dashboard UI on a laptop">
+            <figcaption>
+              <h3>Pulse Dashboard</h3>
+              <p>Realtime analytics with a crisp UI.</p>
+            </figcaption>
+          </figure>
+          <figure class="card project" data-category="app" data-reveal>
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80&auto=format&fit=crop" alt="Mobile app mockups on table">
+            <figcaption>
+              <h3>Loop Mobile</h3>
+              <p>Habit tracker with social circles.</p>
+            </figcaption>
+          </figure>
+          <figure class="card project" data-category="brand" data-reveal>
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80&auto=format&fit=crop" alt="Branded stationery set">
+            <figcaption>
+              <h3>North Brand</h3>
+              <p>Minimal identity and packaging.</p>
+            </figcaption>
+          </figure>
+          <figure class="card project" data-category="web" data-reveal>
+            <img src="https://images.unsplash.
+com/photo-1547658719-8b7c0d3d3a5f?w=1200&q=80&auto=format&fit=crop" alt="Code editor with highlighted syntax">
+            <figcaption>
+              <h3>Syntax Site</h3>
+              <p>Docs theme optimized for devs.</p>
+            </figcaption>
+          </figure>
+          <figure class="card project" data-category="app" data-reveal>
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop" alt="AR/VR headset demo">
+            <figcaption>
+              <h3>Vista AR</h3>
+              <p>Immersive tours for museums.</p>
+            </figcaption>
+          </figure>
+          <figure class="card project" data-category="brand" data-reveal>
+            <img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2?w=1200&q=80&auto=format&fit=crop" alt="Clean business card set">
+            <figcaption>
+              <h3>Atelier</h3>
+              <p>Elegant print collateral.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Simple, transparent pricing</h2>
+          <p class="muted">Start for free, upgrade when you grow.</p>
+        </header>
+
+        <div class="pricing">
+          <article class="plan card" data-reveal>
+            <h3>Starter</h3>
+            <p class="price"><span class="currency">$</span>0 <small>/mo</small></p>
+            <ul class="list">
+              <li>✔ 1 project</li>
+              <li>✔ Email support</li>
+              <li>✔ Community access</li>
+              <li>— Custom domain</li>
+            </ul>
+            <a href="#" class="btn btn--ghost">Choose Starter</a>
+          </article>
+
+          <article class="plan card is-popular" data-reveal>
+            <div class="ribbon">Popular</div>
+            <h3>Pro</h3>
+            <p class="price"><span class="currency">$</span>19 <small>/mo</small></p>
+            <ul class="list">
+              <li>✔ 10 projects</li>
+              <li>✔ Priority support</li>
+              <li>✔ Custom domain</li>
+              <li>✔ Team collaboration</li>
+            </ul>
+            <a href="#" class="btn btn--primary">Choose Pro</a>
+          </article>
+
+          <article class="plan card" data-reveal>
+            <h3>Business</h3>
+            <p class="price"><span class="currency">$</span>49 <small>/mo</small></p>
+            <ul class="list">
+              <li>✔ Unlimited projects</li>
+              <li>✔ SSO & advanced roles</li>
+              <li>✔ SLA support</li>
+              <li>✔ Dedicated success manager</li>
+            </ul>
+            <a href="#" class="btn btn--ghost">Contact Sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Loved by teams of all sizes</h2>
+          <p class="muted">Here’s what our users say.</p>
+        </header>
+
+        <div class="testimonials">
+          <figure class="t card" data-reveal>
+            <blockquote>“Nova helped us ship our new site in days, not weeks.”</blockquote>
+            <figcaption><img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=200&h=200&auto=format&fit=crop" alt=""><div><b>Alex Morgan</b><span>Product Lead, Kite</span></div></figcaption>
+          </figure>
+          <figure class="t card" data-reveal>
+            <blockquote>“Clean, accessible, and fast — exactly what we needed.”</blockquote>
+            <figcaption><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop" alt=""><div><b>Priya Patel</b><span>Founder, Looma</span></div></figcaption>
+          </figure>
+          <figure class="t card" data-reveal>
+            <blockquote>“Dark mode toggle? Chef’s kiss.”</blockquote>
+            <figcaption><img src="https://images.unsplash.
+com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop" alt=""><div><b>Chris Kim</b><span>Engineer, Gridly</span></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Frequently asked questions</h2>
+          <p class="muted">Answers to common queries.</p>
+        </header>
+
+        <div class="accordion" id="faqList">
+          <details class="acc" data-reveal>
+            <summary>Is Nova mobile friendly?</summary>
+            <p>Absolutely. It’s responsive from 320px to 1440px+ with fluid type and spacing.</p>
+          </details>
+          <details class="acc" data-reveal>
+            <summary>Does it support dark mode?</summary>
+            <p>Yes — auto-detects system preferences and allows manual toggling.</p>
+          </details>
+          <details class="acc" data-reveal>
+            <summary>Can I use it for commercial projects?</summary>
+            <p>Yes. Customize as you like and deploy anywhere.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Latest posts</h2>
+          <p class="muted">News, tutorials, and behind-the-scenes.</p>
+        </header>
+
+        <div class="grid-3 posts">
+          <article class="card post" data-reveal>
+            <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?w=1200&q=80&auto=format&fit=crop" alt="Notebook and code snippets on a desk">
+            <div class="post__body">
+              <h3><a href="#">Designing for dark mode</a></h3>
+              <p>Practical tips for color, contrast, and elevation in low-light UIs.</p>
+              <span class="meta">Aug 12 • 6 min read</span>
+            </div>
+          </article>
+          <article class="card post" data-reveal>
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&q=80&auto=format&fit=crop" alt="Code editor with JavaScript open">
+            <div class="post__body">
+              <h3><a href="#">Performance wins in CSS</a></h3>
+              <p>Utilize content-visibility, contain, and modern layout primitives.</p>
+              <span class="meta">Aug 2 • 4 min read</span>
+            </div>
+          </article>
+          <article class="card post" data-reveal>
+            <img src="https://images.unsplash.com/photo-1547658719-8b7c0d3d3a5f?w=1200&q=80&auto=format&fit=crop" alt="Terminal window on a neon background">
+            <div class="post__body">
+              <h3><a href="#">Progressive enhancement playbook</a></h3>
+              <p>Ship features that work everywhere, then add sprinkles.</p>
+              <span class="meta">Jul 28 • 7 min read</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Let’s build something great</h2>
+          <p class="muted">Tell us a bit about your project.</p>
+        </header>
+
+        <form class="card form" id="contactForm" novalidate>
+          <div class="form__row">
+            <label for="name">Name <span aria-hidden="true" class="req">*</span></label>
+            <input id="name" name="name" type="text" required minlength="2" autocomplete="name" placeholder="Ada Lovelace">
+            <span class="error" id="nameErr" role="alert"></span>
+          </div>
+          <div class="form__row">
+            <label for="email">Email <span aria-hidden="true" class="req">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" inputmode="email">
+            <span class="error" id="emailErr" role="alert"></span>
+          </div>
+          <div class="form__row">
+            <label for="budget">Budget</label>
+<select id="budget" name="budget">
+              <option value="">Select a range</option>
+              <option>Under $1,000</option>
+              <option>$1,000 – $5,000</option>
+              <option>$5,000 – $10,000</option>
+              <option>$10,000+</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label for="message">Project details <span aria-hidden="true" class="req">*</span></label>
+            <textarea id="message" name="message" required minlength="10" rows="5" placeholder="What are you building? Goals, timeline, references…"></textarea>
+            <span class="error" id="messageErr" role="alert"></span>
+          </div>
+
+          <div class="form__row form__actions">
+            <button type="submit" class="btn btn--primary">Send message</button>
+            <p class="form__note muted">We’ll get back within 2 business days.</p>
+          </div>
+          <div class="form__success" id="formSuccess" role="status" aria-live="polite" hidden>
+            ✅ Thanks! Your message has been received. (Demo only)
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand--footer" href="#home">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 64 64" class="brand-mark">
+            <rect width="64" height="64" rx="14" class="b0"/>
+            <path d="M16 40L28 20l8 12 4-6 8 14" class="b1"/>
+          </svg>
+          <span>Nova</span>
+        </a>
+        <p class="muted">© <span id="year"></span> Nova. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <form class="newsletter" id="newsForm" novalidate>
+        <label for="newsEmail" class="sr-only">Email address</label>
+        <input id="newsEmail" type="email" placeholder="Join newsletter">
+        <button class="btn btn--ghost" type="submit">Subscribe</button>
+        <span class="error" id="newsErr" role="alert"></span>
+        <span class="success" id="newsOk" role="status" aria-live="polite" hidden>🎉 Subscribed!</span>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
